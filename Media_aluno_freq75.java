@@ -34,30 +34,30 @@ public class Media_aluno_freq75 {
             System.out.println("Digite a Quantidade em Horas que o Aluno Frequentou: ");
             horasAluno = teclado.nextInt();
             //passagem de parametro
-        cargaPRoc = calculo_carga_horaria(carga);
-        //estrutura de decisão Eliminativa
-        if(horasAluno <= cargaPRoc){
-            System.out.println("O(a) Aluno(a) " +name+ " foi Reprovado!! Frequência inferior a 75%");
-        }else{
-            System.out.println("Digite a Primeira Nota do Aluno(a): ");
-            n1 = teclado.nextFloat();
-            System.out.println("Digite a Segunda Nota do Aluno(a): ");
-            n2 = teclado.nextFloat();
-            System.out.println("Digite a Terceira Nota do Aluno(a): ");
-            n3 = teclado.nextFloat();
-            
-            //passagem de parâmetro
-            media = calculo_media(n1, n2, n3);
-            
-            //estrutura decisão final
-            if(media > 7){
-                System.out.println("O(a) Aluno(a) "+name+" foi Aprovado!! Média: "+media+" Frequência superior a 75%");
-            }else if(media >= 5){
-                System.out.println("O(a) Aluno(a) "+name+" foi para Verificação Suplementar!! Média: "+media);
+            cargaPRoc = calculo_carga_horaria(carga);
+            //estrutura de decisão Eliminativa
+            if(horasAluno <= cargaPRoc){
+                System.out.println("O(a) Aluno(a) " +name+ " foi Reprovado!! Frequência inferior a 75%");
             }else{
-                System.out.println("O(a) Aluno(a) "+name+" foi REPROVADO!! Média: "+media);
+                System.out.println("Digite a Primeira Nota do Aluno(a): ");
+                n1 = teclado.nextFloat();
+                System.out.println("Digite a Segunda Nota do Aluno(a): ");
+                n2 = teclado.nextFloat();
+                System.out.println("Digite a Terceira Nota do Aluno(a): ");
+                n3 = teclado.nextFloat();
+            
+                //passagem de parâmetro
+                media = calculo_media(n1, n2, n3);
+            
+                //estrutura decisão final
+                if(media > 7){
+                    System.out.println("O(a) Aluno(a) "+name+" foi Aprovado!! Média: "+media+" Frequência superior a 75%");
+                }else if(media >= 5){
+                    System.out.println("O(a) Aluno(a) "+name+" foi para Verificação Suplementar!! Média: "+media);
+                }else{
+                    System.out.println("O(a) Aluno(a) "+name+" foi REPROVADO!! Média: "+media);
+                }
             }
-        }
         } else{
             System.out.println("Digite a Quantidade de Faltas do Aluno: ");
             horasAluno = teclado.nextInt();
